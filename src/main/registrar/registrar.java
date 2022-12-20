@@ -1,22 +1,33 @@
 package main.registrar;
 
+import main.algorithms.schedule.standard.faculty.facultySchedulingAlgorithm;
 import main.documents.clients.faculty.faculty;
 import main.documents.clients.student.student;
 import main.documents.course.course;
-import main.documents.session.session;
 import org.bson.Document;
 import main.services.mongodb.mongodb;
 
-import java.util.UUID;
+import static main.constants.constants.*;
 
 public class registrar {
-    private static final String COLLECTION_STUDENTS = "students";
-    private static final String COLLECTION_FACULTY = "faculty";
-    private static final String COLLECTION_COURSES = "courses";
-    private static final String COLLECTION_SESSIONS = "sessions";
-    private static mongodb mongoDB;
-    static {mongoDB = new mongodb();}
+
+    private static mongodb mongodb;
+
+    static {mongodb = new mongodb();}
+
     private registrar() {}
+
+    public static void deleteAllStudents() {
+        mongodb.deleteAll(COLLECTION_STUDENTS);
+    }
+
+    public static void deleteAllFaculty() {
+        mongodb.deleteAll(COLLECTION_FACULTY);
+    }
+
+    public static void deleteAllCourses() {
+        mongodb.deleteAll(COLLECTION_COURSES);
+    }
 
     public static void registerStudent(student student) {
         Document doc = new Document("firstName", student.getFirstName())
@@ -30,8 +41,11 @@ public class registrar {
                 .append("zip", student.getZipCode())
                 .append("dob", student.getDateOfBirth())
                 .append("gpa", student.getGpa())
-                .append("startDate", student.getStartDate());
-        mongoDB.insertOne(COLLECTION_STUDENTS, doc);
+                .append("startDate", student.getStartDate())
+                .append("enrolledCourses", student.getEnrolledCoursesIds())
+                .append("requiredCourses", student.getRequiredCoursesIds())
+                .append("id", student.getId());
+        mongodb.insertOne(COLLECTION_STUDENTS, doc);
     }
 
     public static void registerFaculty(faculty faculty) {
@@ -46,8 +60,10 @@ public class registrar {
                 .append("zip", faculty.getZipCode())
                 .append("dob", faculty.getDateOfBirth())
                 .append("hireDate", faculty.getHireDate())
-                .append("tenured", faculty.isTenured());
-        mongoDB.insertOne(COLLECTION_FACULTY, doc);
+                .append("tenured", faculty.isTenured())
+                .append("courseId", faculty.getCourseId())
+                .append("id", faculty.getId());
+        mongodb.insertOne(COLLECTION_FACULTY, doc);
     }
 
     public static void createCourse(course course) {
@@ -57,40 +73,12 @@ public class registrar {
                 .append("minStudents", course.getMinStudents())
                 .append("maxStudents", course.getMaxStudents())
                 .append("id", course.getDepartment() + course.getCode());
-        mongoDB.insertOne(COLLECTION_COURSES, doc);
+        mongodb.insertOne(COLLECTION_COURSES, doc);
     }
 
-    public static void scheduleSession(String courseId, session session) {
-        Document doc = new Document("courseId", courseId)
-                .append("sessionId", UUID.randomUUID().toString())
-                .append("facultyId", session.getFacultyId())
-                .append("startDate", session.getStartDate())
-                .append("endDate", session.getEndDate())
-                .append("minStudents", session.getMinStudents())
-                .append("maxStudents", session.getMaxStudents())
-                .append("students", session.getStudents());
-        mongoDB.insertOne(COLLECTION_SESSIONS, doc);
-
-        Document filter = new Document("id", courseId);
-        long numSessions = mongoDB.countDocuments(COLLECTION_SESSIONS, filter);
-        long minStudents = mongoDB.find(COLLECTION_COURSES, filter).get(0).getLong("minStudents");
-        if (numSessions == 0 || numSessions * minStudents > session.getStudents().size()) {
-            // If this is the first session for the course or if the total number of students across all sessions
-            // is less than the minimum number of students required for the course, cancel the course
-            mongoDB.deleteOne(COLLECTION_COURSES, filter);
-        }
-    }
-
-    public static void deleteAllStudents() {
-        mongoDB.deleteAll(COLLECTION_STUDENTS);
-    }
-
-    public static void deleteAllFaculty() {
-        mongoDB.deleteAll(COLLECTION_FACULTY);
-    }
-
-    public static void deleteAllCourses() {
-        mongoDB.deleteAll(COLLECTION_COURSES);
+    public static void schedule() {
+        facultySchedulingAlgorithm facultySchedulingAlgorithm = new facultySchedulingAlgorithm();
+        facultySchedulingAlgorithm.schedule();
     }
 
 }

@@ -21,5 +21,7 @@ public class Main {
         generate.students(100);
         generate.faculty(20);
         generate.courses();
+
+        registrar.schedule();
     }
 }

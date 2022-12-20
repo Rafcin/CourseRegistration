@@ -11,8 +11,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+/**
+ * Generate fake data for testing purposes.
+ */
 public class generate {
     Faker faker = new Faker();
     private static final List<course> courses = new ArrayList<course>(
@@ -31,6 +35,10 @@ public class generate {
 
     public void students(int size) {
         IntStream.range(0, size).forEach(i -> {
+            List<String> requiredCourses = new ArrayList<String>();
+            IntStream.range(0, faker.number().numberBetween(1, 5)).forEach(j -> {
+                requiredCourses.add(courses.get(faker.number().numberBetween(0, courses.size() - 1)).getId());
+            });
             student student = new student(
                     constants.CLIENT_TYPE.STUDENT,
                     faker.name().firstName(),
@@ -46,7 +54,9 @@ public class generate {
                     faker.date().birthday().toString(),
                     4.0,
                     faker.date().between(new Date("12/01/2022"), new Date("12/11/2022")).toString(),
-                    4
+                    4,
+                    //Dedupe courses
+                    requiredCourses.stream().distinct().collect(Collectors.toList())
             );
             registrar.registerStudent(student);
         });

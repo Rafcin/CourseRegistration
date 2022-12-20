@@ -1,4 +1,5 @@
 package main.services.mongodb;
+import com.google.gson.Gson;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
@@ -7,6 +8,8 @@ import org.bson.Document;
 
 import java.util.ArrayList;
 import java.util.List;
+import com.mongodb.client.model.Filters;
+import org.bson.conversions.Bson;
 
 public class mongodb {
     private static final String CONNECTION_STRING = "mongodb://localhost:27017";
@@ -26,6 +29,28 @@ public class mongodb {
         return database.getCollection(collectionName);
     }
 
+    public static <T> T toObject(Document doc, Class<T> clazz) {
+        Gson gson = new Gson();
+        String json = doc.toJson();
+        return gson.fromJson(json, clazz);
+    }
+
+    public static <T> List<T> toList(MongoCollection<Document> collection, Class<T> clazz) {
+        List<T> list = new ArrayList<>();
+        for (Document doc : collection.find()) {
+            list.add(toObject(doc, clazz));
+        }
+        return list;
+    }
+
+    public static <T> List<T> toList(MongoCollection<Document> collection, String field, String value, Class<T> clazz) {
+        List<T> list = new ArrayList<>();
+        for (Document doc : collection.find(Filters.eq(field, value))) {
+            list.add(toObject(doc, clazz));
+        }
+        return list;
+    }
+
     public static void insertOne(String collectionName, Document document) {
         getCollection(collectionName).insertOne(document);
     }
@@ -43,7 +68,15 @@ public class mongodb {
         getCollection(collectionName).updateOne(filter, update);
     }
 
+    public static void updateOne(String collectionName, Bson filter, Document update) {
+        getCollection(collectionName).updateOne(filter, update);
+    }
+
     public static void updateMany(String collectionName, Document filter, Document update) {
+        getCollection(collectionName).updateMany(filter, update);
+    }
+
+    public static void updateMany(String collectionName, Bson filter, Document update) {
         getCollection(collectionName).updateMany(filter, update);
     }
 
@@ -51,7 +84,15 @@ public class mongodb {
         getCollection(collectionName).deleteOne(filter);
     }
 
+    public static void deleteOne(String collectionName, Bson filter) {
+        getCollection(collectionName).deleteOne(filter);
+    }
+
     public static void deleteMany(String collectionName, Document filter) {
+        getCollection(collectionName).deleteMany(filter);
+    }
+
+    public static void deleteMany(String collectionName, Bson filter) {
         getCollection(collectionName).deleteMany(filter);
     }
 
@@ -62,6 +103,8 @@ public class mongodb {
     public static List<Document> find(String collectionName, Document filter) {
         return getCollection(collectionName).find(filter).into(new ArrayList<>());
     }
+
+
 
     public static void deleteAll(String collectionName) {
         getCollection(collectionName).deleteMany(new Document());

@@ -1,11 +1,16 @@
 package main.documents.course;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class course {
     private String department;
     private String code;
     private String description;
     private int minStudents;
     private int maxStudents;
+    private String facultyId;
+    private List<String> sessionIds;
     private String id;
 
     public course(String department, String code, String description, int minStudents, int maxStudents, String id) {
@@ -14,6 +19,8 @@ public class course {
         this.description = description;
         this.minStudents = minStudents;
         this.maxStudents = maxStudents;
+        this.facultyId = null;
+        this.sessionIds = new ArrayList<>();
         this.id = id;
     }
 
@@ -63,5 +70,21 @@ public class course {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getFacultyId() {
+        return facultyId;
+    }
+
+    public void setFacultyId(String facultyId) {
+        this.facultyId = facultyId;
+    }
+
+    public List<String> getSessionIds() {
+        return sessionIds;
+    }
+
+    public void setSessionIds(List<String> sessionIds) {
+        this.sessionIds = sessionIds;
     }
 }

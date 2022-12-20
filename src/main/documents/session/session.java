@@ -4,23 +4,23 @@ import java.util.List;
 
 public class session {
     private String courseId;
-    private String sessionId;
+    private String id;
     private String facultyId;
     private String startDate;
     private String endDate;
     private int minStudents;
     private int maxStudents;
-    private List<String> students;
+    private List<String> enrolledStudentIds;
 
-    public session(String courseId, String sessionId, String facultyId, String startDate, String endDate, int minStudents, int maxStudents, List<String> students) {
+    public session(String courseId, String id, String facultyId, String startDate, String endDate, int minStudents, int maxStudents, List<String> students) {
         this.courseId = courseId;
-        this.sessionId = sessionId;
+        this.id = id;
         this.facultyId = facultyId;
         this.startDate = startDate;
         this.endDate = endDate;
         this.minStudents = minStudents;
         this.maxStudents = maxStudents;
-        this.students = students;
+        this.enrolledStudentIds = students;
     }
 
     public String getCourseId() {
@@ -31,12 +31,12 @@ public class session {
         this.courseId = courseId;
     }
 
-    public String getSessionId() {
-        return sessionId;
+    public String getId() {
+        return id;
     }
 
-    public void setSessionId(String sessionId) {
-        this.sessionId = sessionId;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getFacultyId() {
@@ -79,11 +79,11 @@ public class session {
         this.maxStudents = maxStudents;
     }
 
-    public List<String> getStudents() {
-        return students;
+    public List<String> getEnrolledStudentIds() {
+        return enrolledStudentIds;
     }
 
-    public void setStudents(List<String> students) {
-        this.students = students;
+    public void setEnrolledStudentIds(List<String> enrolledStudentIds) {
+        this.enrolledStudentIds = enrolledStudentIds;
     }
 }
