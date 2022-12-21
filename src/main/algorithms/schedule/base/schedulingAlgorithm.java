@@ -8,6 +8,9 @@ import main.documents.session.session;
 
 import java.util.List;
 
+/**
+ * Base algorithm class
+ */
 public abstract class schedulingAlgorithm {
     protected mongodb mongodb;
     public schedulingAlgorithm() {

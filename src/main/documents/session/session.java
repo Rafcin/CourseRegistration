@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+/**
+ * Session class contains session info for courses.
+ */
 public class session {
     private String courseId;
     private String id;

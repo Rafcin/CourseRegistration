@@ -4,6 +4,9 @@ import main.constants.constants;
 
 import java.util.UUID;
 
+/**
+ * Base class for all clients, contains all basic info to create a person.
+ */
 public abstract class client {
     //Client type
     private constants.CLIENT_TYPE clientType;

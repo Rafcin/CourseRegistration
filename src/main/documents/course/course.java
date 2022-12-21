@@ -5,6 +5,9 @@ import main.constants.constants;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Course class contains basic course information.
+ */
 public class course {
     private String department;
     private String code;

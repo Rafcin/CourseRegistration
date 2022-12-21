@@ -1,0 +1,30 @@
+digraph "Main" {
+
+splines  = ortho;
+fontname = "Inconsolata";
+
+node [colorscheme = ylgnbu4];
+edge [colorscheme = dark28, dir = both];
+
+CLIENT_TYPE                                  [shape = record, pos = "24.820,14.789!"   , label = "{ \<\<enumeration\>\>\nCLIENT_TYPE | + CLIENT_TYPE() : \l|+ STUDENT : \l + FACULTY : \l|+ valueOf(String) : CLIENT_TYPE\l + values() : CLIENT_TYPE[]\l }"];
+COURSE_STATUS                                [shape = record, pos = "8.778,15.982!"    , label = "{ \<\<enumeration\>\>\nCOURSE_STATUS | + COURSE_STATUS() : \l|+ ACTIVE : \l + CANCELLED : \l + INACTIVE : \l|+ values() : COURSE_STATUS[]\l + valueOf(String) : COURSE_STATUS\l }"];
+Main                                         [shape = record, pos = "21.479,14.637!"   , label = "{ Main | + Main() : \l|+ main(String[]) : void\l }"];
+constants                                    [shape = record, pos = "13.342,15.004!"   , label = "{ constants | + constants() : \l|+ COLLECTION_STUDENTS : String\l + COLLECTION_FACULTY : String\l + COLLECTION_COURSES : String\l + COLLECTION_SESSIONS : String\l }"];
+generate                                     [shape = record, pos = "17.719,15.580!"   , label = "{ generate | + generate() : \l|~ faker : Faker\l - courses : List\<course\>\l|+ students(int) : void\l + courses() : void\l + createStudent() : student\l + faculty(int) : void\l }"];
+mongodb                                      [shape = record, pos = "-2.862,19.192!"   , label = "{ mongodb | + mongodb() : \l|- CONNECTION_STRING : String\l - DATABASE_NAME : String\l - mongoClient : MongoClient\l - database : MongoDatabase\l|+ deleteMany(String, Bson) : void\l + countDocuments(String, Document) : long\l + toObject(Document, Class\<T\>) : T\l + updateMany(String, Bson, Document) : void\l + insertMany(String, List\<Document\>) : void\l + deleteOne(String, Document) : void\l + find(String, Document) : List\<Document\>\l + deleteAll(String) : void\l + insertOne(String, Document) : void\l + toList(MongoCollection\<Document\>, Bson, Class\<T\>) : List\<T\>\l + toList(MongoCollection\<Document\>, String, String, Class\<T\>) : List\<T\>\l + toList(List\<Document\>, Class\<T\>) : List\<T\>\l + insertOne(String, String) : void\l + deleteOne(String, Bson) : void\l + updateOne(String, Bson, Document) : void\l + updateOne(String, Document, Document) : void\l + updateMany(String, Document, Document) : void\l + toDocument(Object) : Document\l + deleteMany(String, Document) : void\l + getCollection(String) : MongoCollection\<Document\>\l + toList(MongoCollection\<Document\>, Class\<T\>) : List\<T\>\l }"];
+"package  main.algorithms.schedule.base"     [shape = record, pos = "5.430,0.705!"     , label = "{ \<\<package\>\>\npackage  main.algorithms.schedule.base |  }"];
+"package  main.algorithms.schedule.standard" [shape = record, pos = "-1.337,2.126!"    , label = "{ \<\<package\>\>\npackage  main.algorithms.schedule.standard |  }"];
+"package  main.documents.clients"            [shape = record, pos = "-0.612,0.660!"    , label = "{ \<\<package\>\>\npackage  main.documents.clients |  }"];
+"package  main.documents.course"             [shape = record, pos = "16.933,1.998!"    , label = "{ \<\<package\>\>\npackage  main.documents.course |  }"];
+"package  main.documents.session"            [shape = record, pos = "11.634,1.600!"    , label = "{ \<\<package\>\>\npackage  main.documents.session |  }"];
+registrar                                    [shape = record, pos = "5.339,9.870!"     , label = "{ registrar | - registrar() : \l|- mongodb : mongodb\l|+ queryFaculty(Bson) : List\<faculty\>\l + print(Class\<T\>) : void\l + querySessions() : List\<session\>\l + schedule() : void\l + deleteAllSessions() : void\l + query(List\<Document\>, Class\<T\>) : List\<T\>\l + deleteAllCourses() : void\l + queryStudents() : List\<student\>\l + queryCourses(Bson) : List\<course\>\l + registerSession(session) : void\l + queryCourses() : List\<course\>\l + queryFaculty() : List\<faculty\>\l + deleteAllStudents() : void\l + registerStudent(student) : void\l + querySessions(Bson) : List\<session\>\l + print(String, Class\<T\>) : void\l + deleteAllFaculty() : void\l + queryStudents(Bson) : List\<student\>\l + registerFaculty(faculty) : void\l + createCourse(course) : void\l }"];
+table                                        [shape = record, pos = "5.510,14.938!"    , label = "{ table | + table() : \l|+ print(Object) : void\l }"];
+
+CLIENT_TYPE                                  -> constants                                    [color = "#820000", style = solid , arrowtail = odot    , arrowhead = none    , taillabel = "", label = "", headlabel = ""];
+COURSE_STATUS                                -> constants                                    [color = "#820000", style = solid , arrowtail = odot    , arrowhead = none    , taillabel = "", label = "", headlabel = ""];
+Main                                         -> generate                                     [color = "#595959", style = dashed, arrowtail = none    , arrowhead = vee     , taillabel = "", label = "«create»", headlabel = ""];
+registrar                                    -> mongodb                                      [color = "#595959", style = solid , arrowtail = diamond , arrowhead = vee     , taillabel = "1", label = "", headlabel = "mongodb\n1"];
+registrar                                    -> mongodb                                      [color = "#595959", style = dashed, arrowtail = none    , arrowhead = vee     , taillabel = "", label = "«create»", headlabel = ""];
+registrar                                    -> table                                        [color = "#595959", style = dashed, arrowtail = none    , arrowhead = vee     , taillabel = "", label = "«create»", headlabel = ""];
+
+}

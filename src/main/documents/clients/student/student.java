@@ -8,6 +8,10 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Student class extends base client and is Serializable for db.
+ * Adds gpa, startDate, and maximumCourses and more to the client.
+ */
 public class student extends client implements Serializable {
     //User GPA
     private double gpa;

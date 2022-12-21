@@ -33,6 +33,32 @@ public class generate {
                     new course("CS", "30B", "COMPUTER DISCRETE MATHEMATICS II", 10, 20, "CS30B", "01/01/2023", "05/10/2023"))
     );
 
+    public student createStudent() {
+        List<String> requiredCourses = new ArrayList<String>();
+        IntStream.range(0, faker.number().numberBetween(1, 5)).forEach(j -> {
+            requiredCourses.add(courses.get(faker.number().numberBetween(0, courses.size() - 1)).getId());
+        });
+        return new student(
+                constants.CLIENT_TYPE.STUDENT,
+                faker.name().firstName(),
+                faker.name().firstName(),
+                faker.name().lastName(),
+                faker.internet().emailAddress(),
+                faker.phoneNumber().phoneNumber(),
+                faker.address().streetAddress(),
+                faker.address().city(),
+                faker.address().state(),
+                faker.address().zipCode(),
+                faker.address().country(),
+                faker.date().birthday().toString(),
+                4.0,
+                faker.date().between(new Date("12/01/2022"), new Date("12/11/2022")).toString(),
+                4,
+                //Dedupe courses
+                requiredCourses.stream().distinct().collect(Collectors.toList())
+        );
+    }
+
     public void students(int size) {
         IntStream.range(0, size).forEach(i -> {
             List<String> requiredCourses = new ArrayList<String>();

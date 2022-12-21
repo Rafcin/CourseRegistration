@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>Main</OriginalElement>
+  <nodes>
+    <node x="1546.5210603432035" y="312.1446127812174">Main</node>
+    <node x="1787.0050985024475" y="301.16571443957804">main.constants.constants.CLIENT_TYPE</node>
+    <node x="384.3888629218033" y="655.3823457608727">main.registrar.registrar</node>
+    <node x="396.7036305284629" y="290.4486049285006">main.services.table.table</node>
+    <node x="960.5990021583829" y="285.73937569367774">main.constants.constants</node>
+    <node x="837.630350981902" y="1250.7962679948746">main.documents.session</node>
+    <node x="632.0342983304952" y="215.27588683648094">main.constants.constants.COURSE_STATUS</node>
+    <node x="1275.7718091246822" y="244.26107402603415">main.fake.generate</node>
+    <node x="1219.1840107509101" y="1222.1552192714362">main.documents.course</node>
+    <node x="-206.06845157637963" y="-15.847381542337615">main.services.mongodb.mongodb</node>
+    <node x="-96.24098342665476" y="1212.920168376317">main.algorithms.schedule.standard</node>
+    <node x="-44.048823572868855" y="1318.5091235432405">main.documents.clients</node>
+    <node x="390.94588990191284" y="1315.2234772294746">main.algorithms.schedule.base</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="main.constants.constants.COURSE_STATUS" target="main.constants.constants" relationship="INNER_CLASS">
+      <point x="133.99970166950482" y="1.1316351907453281E-4" />
+      <point x="931.0" y="305.276" />
+      <point x="931.0" y="363.239" />
+      <point x="-127.50000215838293" y="-3.756936777676856E-4" />
+    </edge>
+    <edge source="main.registrar.registrar" target="main.services.mongodb.mongodb" relationship="CREATE">
+      <point x="-167.50000000000006" y="0.0" />
+      <point x="58.93154842362037" y="937.3823457608727" />
+      <point x="0.0" y="330.0" />
+    </edge>
+    <edge source="main.registrar.registrar" target="main.services.mongodb.mongodb" relationship="TO_ONE">
+      <point x="-167.50000000000006" y="15.0" />
+      <point x="43.93154842362037" y="952.3823457608727" />
+      <point x="-15.0" y="330.0" />
+    </edge>
+    <edge source="main.registrar.registrar" target="main.services.table.table" relationship="CREATE">
+      <point x="-70.18523239334047" y="-282.0" />
+      <point x="0.0" y="41.5" />
+    </edge>
+    <edge source="Main" target="main.fake.generate" relationship="CREATE">
+      <point x="-89.0" y="-7.383538755183224" />
+      <point x="105.0" y="0.0" />
+    </edge>
+    <edge source="main.constants.constants.CLIENT_TYPE" target="main.constants.constants" relationship="INNER_CLASS">
+      <point x="-9.850244737208413E-5" y="78.00028556042196" />
+      <point x="1908.505" y="474.666" />
+      <point x="931.0" y="474.666" />
+      <point x="931.0" y="363.239" />
+      <point x="-127.50000215838293" y="-3.756936777676856E-4" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.8347763347763347" showDependencies="true" x="912.0" y="667.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

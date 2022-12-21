@@ -13,7 +13,14 @@ import java.util.Optional;
 import static main.constants.constants.COLLECTION_COURSES;
 import static main.constants.constants.COLLECTION_FACULTY;
 
+/**
+ * This class is responsible for scheduling the faculty. It will take the faculty and courses and link them correctly. Any connected queries that need to be made to the db
+ * can be queried with the courseId and facultyId to find linked sessions, faculty and courses.
+ */
 public class facultySchedulingAlgorithm {
+    /**
+     * Schedule faculty into courses. Does not require an id, automagical.
+     */
     public void schedule() {
         // Get the list of available faculty members
         List<faculty> faculty = mongodb.toList(mongodb.getCollection(COLLECTION_FACULTY), faculty.class);
@@ -35,6 +42,11 @@ public class facultySchedulingAlgorithm {
         }
     }
 
+    /**
+     * Assigns a faculty member to a course
+     * @param faculty
+     * @param course
+     */
     private void assignFaculty(faculty faculty, course course) {
         // Update the course with the faculty member's ID
         course.setFacultyId(faculty.getId());
@@ -45,11 +57,21 @@ public class facultySchedulingAlgorithm {
         updateFaculty(course, faculty);
     }
 
+    /**
+     * Updates a course
+     * @param course
+     * @param faculty
+     */
     private void updateCourse(course course,  faculty faculty) {
         // Use the MongoDB class to update the course in the database
         mongodb.updateOne(COLLECTION_COURSES, Filters.eq("id", course.getId()), new Document("$set", new Document("facultyId", faculty.getId())));
     }
 
+    /**
+     * Updates a faculty member
+     * @param course
+     * @param faculty
+     */
     private void updateFaculty(course course, faculty faculty) {
         // Use the MongoDB class to update the faculty member in the database
         mongodb.updateOne(COLLECTION_FACULTY, Filters.eq("id", faculty.getId()), new Document("$set", new Document("courseId", course.getId())));

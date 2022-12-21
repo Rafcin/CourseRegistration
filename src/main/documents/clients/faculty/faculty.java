@@ -6,9 +6,11 @@ import main.documents.clients.client.client;
 
 import java.io.Serializable;
 
+/**
+ * Faculty class extends base client and is Serializable for db.
+ * Adds isTenured and hireDate to the client.
+ */
 public class faculty extends client implements Serializable {
-
-
     //Is the faculty tenured
     private boolean isTenured;
     //Hire date of the faculty

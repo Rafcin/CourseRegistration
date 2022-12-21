@@ -18,7 +18,16 @@ import main.documents.clients.student.student;
 import main.documents.course.course;
 import main.documents.session.session;
 
+/**
+ * Student Scheduling Algorithm, handles scheduling students into courses and cancelling classes if not enough students are required.
+ * A majority of the logic can be controlled by simple aggregation queries to mongo.
+ */
+
 public class studentSchedulingAlgorithm {
+    /**
+     * Schedule students into courses and takes a courseId to do it.
+     * @param courseId
+     */
     public void schedule(String courseId) {
         course course = mongodb.toList(mongodb.getCollection(COLLECTION_COURSES), Filters.eq("id", courseId), course.class).get(0);
         if (course == null) {
@@ -69,6 +78,13 @@ public class studentSchedulingAlgorithm {
         saveSessions(sessions, course);
     }
 
+    /**
+     * Get current session
+     * @param sessions
+     * @param course
+     * @return
+     */
+
     private session getCurrentSession(List<session> sessions, course course) {
         for (session session : sessions) {
             if (session.getEnrolledStudentIds().size() < session.getMaxStudents()) {
@@ -77,6 +93,12 @@ public class studentSchedulingAlgorithm {
         }
         return null;
     }
+
+    /**
+     * Save sessions
+     * @param sessions
+     * @param course
+     */
 
     private void saveSessions(List<session> sessions, course course) {
         // Delete all existing sessions
