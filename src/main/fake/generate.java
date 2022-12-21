@@ -7,10 +7,7 @@ import main.documents.clients.student.student;
 import main.documents.course.course;
 import main.registrar.registrar;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -19,6 +16,11 @@ import java.util.stream.IntStream;
  */
 public class generate {
     Faker faker = new Faker();
+
+    public static float randomGpa() {
+        Random random = new Random();
+        return (float) (random.nextDouble() * 4.0);
+    }
     private static final List<course> courses = new ArrayList<course>(
             Arrays.asList(
                     new course("CS", "1A", "Introduction to Computer Science", 10, 20, "CS1A", "01/01/2023", "05/10/2023"),
@@ -29,8 +31,19 @@ public class generate {
                     new course("CS", "3B", "COMPUTER ORGANIZATION AND MACHINE LANGUAGE II", 10, 20, "CS3B", "01/01/2023", "05/10/2023"),
                     new course("CS", "4A", "INTRODUCTION TO JAVA FOR COMPUTER SCIENCE", 10, 20, "CS4A", "01/01/2023", "05/10/2023"),
                     new course("CS", "4B", "ADVANCED TOPICS IN JAVA FOR COMPUTER SCIENCE", 10, 20, "CS4B", "01/01/2023", "05/10/2023"),
-                    new course("CS", "30A", "COMPUTER DISCRETE MATHEMATICS I", 10, 20, "CS30A", "01/01/2023", "05/10/2023"),
-                    new course("CS", "30B", "COMPUTER DISCRETE MATHEMATICS II", 10, 20, "CS30B", "01/01/2023", "05/10/2023"))
+                    new course("CS", "5A", "INTRODUCTION TO COMPUTER NETWORKS", 10, 20, "CS5A", "01/01/2023", "05/10/2023"),
+                    new course("CS", "5B", "ADVANCED TOPICS IN COMPUTER NETWORKS", 10, 20, "CS5B", "01/01/2023", "05/10/2023"),
+                    new course("CS", "6A", "INTRODUCTION TO DATABASES", 10, 20, "CS6A", "01/01/2023", "05/10/2023"),
+                    new course("CS", "6B", "ADVANCED TOPICS IN DATABASES", 10, 20, "CS6B", "01/01/2023", "05/10/2023"),
+                    new course("CS", "7A", "INTRODUCTION TO OPERATING SYSTEMS", 10, 20, "CS7A", "01/01/2023", "05/10/2023"),
+                    new course("CS", "7B", "ADVANCED TOPICS IN OPERATING SYSTEMS", 10, 20, "CS7B", "01/01/2023", "05/10/2023"),
+                    new course("CS", "8A", "INTRODUCTION TO ARTIFICIAL INTELLIGENCE", 10, 20, "CS8A", "01/01/2023", "05/10/2023"),
+                    new course("CS", "8B", "ADVANCED TOPICS IN ARTIFICIAL INTELLIGENCE", 10, 20, "CS8B", "01/01/2023", "05/10/2023"),
+                    new course("CS", "9A", "INTRODUCTION TO SOFTWARE ENGINEERING", 10, 20, "CS9A", "01/01/2023", "05/10/2023"),
+                    new course("CS", "9B", "ADVANCED TOPICS IN SOFTWARE ENGINEERING", 10, 20, "CS9B", "01/01/2023", "05/10/2023"),
+                    new course("CS", "10A", "INTRODUCTION TO COMPUTER SECURITY", 10, 20, "CS10A", "01/01/2023", "05/10/2023"),
+                    new course("CS", "10B", "ADVANCED TOPICS IN COMPUTER SECURITY", 10, 20, "CS10B", "01/01/2023", "05/10/2023"),
+                    new course("CS", "11A", "INTRODUCTION TO COMPUTER GRAPHICS", 10, 20, "CS11A", "01/01/2023", "05/10/2023"))
     );
 
     public student createStudent() {
@@ -51,7 +64,7 @@ public class generate {
                 faker.address().zipCode(),
                 faker.address().country(),
                 faker.date().birthday().toString(),
-                4.0,
+                faker.number().numberBetween(1, 5),
                 faker.date().between(new Date("12/01/2022"), new Date("12/11/2022")).toString(),
                 4,
                 //Dedupe courses
@@ -78,7 +91,7 @@ public class generate {
                     faker.address().zipCode(),
                     faker.address().country(),
                     faker.date().birthday().toString(),
-                    4.0,
+                    randomGpa(),
                     faker.date().between(new Date("12/01/2022"), new Date("12/11/2022")).toString(),
                     4,
                     //Dedupe courses

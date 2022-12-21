@@ -28,6 +28,7 @@ public class Main {
         generate generate = new generate();
         generate.students(150);
         generate.faculty(10);
+        //Create only 5 courses of the set that exists. Pass no value for all courses.
         generate.courses(5);
         //Schedule the classes and faculty.
         registrar.schedule();
