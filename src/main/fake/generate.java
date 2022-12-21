@@ -21,16 +21,16 @@ public class generate {
     Faker faker = new Faker();
     private static final List<course> courses = new ArrayList<course>(
             Arrays.asList(
-                    new course("CS", "1A", "Introduction to Computer Science", 10, 20, "CS1A"),
-                    new course("CS", "1B", "Introduction to Computer Science II", 10, 20, "CS1B"),
-                    new course("CS", "1C", "Introduction to Computer Science III", 10, 20, "CS1C"),
-                    new course("CS", "1D", "Data Structures and Algorithms", 10, 20, "CS1D"),
-                    new course("CS", "3A", "COMPUTER ORGANIZATION AND MACHINE LANGUAGE", 10, 20, "CS3A"),
-                    new course("CS", "3B", "COMPUTER ORGANIZATION AND MACHINE LANGUAGE II", 10, 20, "CS3B"),
-                    new course("CS", "4A", "INTRODUCTION TO JAVA FOR COMPUTER SCIENCE", 10, 20, "CS4A"),
-                    new course("CS", "4B", "ADVANCED TOPICS IN JAVA FOR COMPUTER SCIENCE", 10, 20, "CS4B"),
-                    new course("CS", "30A", "COMPUTER DISCRETE MATHEMATICS I", 10, 20, "CS30A"),
-                    new course("CS", "30B", "COMPUTER DISCRETE MATHEMATICS II", 10, 20, "CS30B"))
+                    new course("CS", "1A", "Introduction to Computer Science", 10, 20, "CS1A", "01/01/2023", "05/10/2023"),
+                    new course("CS", "1B", "Introduction to Computer Science II", 10, 20, "CS1B", "01/01/2023", "05/10/2023"),
+                    new course("CS", "1C", "Introduction to Computer Science III", 10, 20, "CS1C", "01/01/2023", "05/10/2023"),
+                    new course("CS", "1D", "Data Structures and Algorithms", 10, 20, "CS1D", "01/01/2023", "05/10/2023"),
+                    new course("CS", "3A", "COMPUTER ORGANIZATION AND MACHINE LANGUAGE", 10, 20, "CS3A", "01/01/2023", "05/10/2023"),
+                    new course("CS", "3B", "COMPUTER ORGANIZATION AND MACHINE LANGUAGE II", 10, 20, "CS3B", "01/01/2023", "05/10/2023"),
+                    new course("CS", "4A", "INTRODUCTION TO JAVA FOR COMPUTER SCIENCE", 10, 20, "CS4A", "01/01/2023", "05/10/2023"),
+                    new course("CS", "4B", "ADVANCED TOPICS IN JAVA FOR COMPUTER SCIENCE", 10, 20, "CS4B", "01/01/2023", "05/10/2023"),
+                    new course("CS", "30A", "COMPUTER DISCRETE MATHEMATICS I", 10, 20, "CS30A", "01/01/2023", "05/10/2023"),
+                    new course("CS", "30B", "COMPUTER DISCRETE MATHEMATICS II", 10, 20, "CS30B", "01/01/2023", "05/10/2023"))
     );
 
     public void students(int size) {

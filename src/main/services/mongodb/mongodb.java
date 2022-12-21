@@ -35,9 +35,31 @@ public class mongodb {
         return gson.fromJson(json, clazz);
     }
 
+    public static Document toDocument(Object obj) {
+        Gson gson = new Gson();
+        String json = gson.toJson(obj);
+        return Document.parse(json);
+    }
+
     public static <T> List<T> toList(MongoCollection<Document> collection, Class<T> clazz) {
         List<T> list = new ArrayList<>();
         for (Document doc : collection.find()) {
+            list.add(toObject(doc, clazz));
+        }
+        return list;
+    }
+
+    public static <T> List<T> toList(List<Document> documents, Class<T> clazz) {
+        List<T> list = new ArrayList<>();
+        for (Document doc : documents) {
+            list.add(toObject(doc, clazz));
+        }
+        return list;
+    }
+
+    public static <T> List<T> toList(MongoCollection<Document> collection, Bson filter, Class<T> clazz) {
+        List<T> list = new ArrayList<>();
+        for (Document doc : collection.find(filter)) {
             list.add(toObject(doc, clazz));
         }
         return list;

@@ -1,26 +1,28 @@
 package main.documents.session;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 public class session {
     private String courseId;
     private String id;
     private String facultyId;
+    private List<String> enrolledStudentIds;
     private String startDate;
     private String endDate;
     private int minStudents;
     private int maxStudents;
-    private List<String> enrolledStudentIds;
 
-    public session(String courseId, String id, String facultyId, String startDate, String endDate, int minStudents, int maxStudents, List<String> students) {
+    public session(String courseId, String facultyId) {
         this.courseId = courseId;
-        this.id = id;
+        this.id = UUID.randomUUID().toString();
         this.facultyId = facultyId;
-        this.startDate = startDate;
-        this.endDate = endDate;
-        this.minStudents = minStudents;
-        this.maxStudents = maxStudents;
-        this.enrolledStudentIds = students;
+        this.enrolledStudentIds = new ArrayList<>();
+        this.minStudents = 0;
+        this.maxStudents = 0;
+        this.startDate = null;
+        this.endDate = null;
     }
 
     public String getCourseId() {
@@ -45,6 +47,14 @@ public class session {
 
     public void setFacultyId(String facultyId) {
         this.facultyId = facultyId;
+    }
+
+    public List<String> getEnrolledStudentIds() {
+        return enrolledStudentIds;
+    }
+
+    public void setEnrolledStudentIds(List<String> enrolledStudentIds) {
+        this.enrolledStudentIds = enrolledStudentIds;
     }
 
     public String getStartDate() {
@@ -77,13 +87,5 @@ public class session {
 
     public void setMaxStudents(int maxStudents) {
         this.maxStudents = maxStudents;
-    }
-
-    public List<String> getEnrolledStudentIds() {
-        return enrolledStudentIds;
-    }
-
-    public void setEnrolledStudentIds(List<String> enrolledStudentIds) {
-        this.enrolledStudentIds = enrolledStudentIds;
     }
 }

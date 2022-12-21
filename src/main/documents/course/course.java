@@ -1,5 +1,7 @@
 package main.documents.course;
 
+import main.constants.constants;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,9 +13,12 @@ public class course {
     private int maxStudents;
     private String facultyId;
     private List<String> sessionIds;
+    private String startDate;
+    private String endDate;
+    private constants.COURSE_STATUS status;
     private String id;
 
-    public course(String department, String code, String description, int minStudents, int maxStudents, String id) {
+    public course(String department, String code, String description, int minStudents, int maxStudents, String id, String startDate, String endDate) {
         this.department = department;
         this.code = code;
         this.description = description;
@@ -21,6 +26,9 @@ public class course {
         this.maxStudents = maxStudents;
         this.facultyId = null;
         this.sessionIds = new ArrayList<>();
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.status = constants.COURSE_STATUS.INACTIVE;
         this.id = id;
     }
 
@@ -86,5 +94,29 @@ public class course {
 
     public void setSessionIds(List<String> sessionIds) {
         this.sessionIds = sessionIds;
+    }
+
+    public String getStartDate() {
+        return startDate;
+    }
+
+    public void setStartDate(String startDate) {
+        this.startDate = startDate;
+    }
+
+    public String getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(String endDate) {
+        this.endDate = endDate;
+    }
+
+    public constants.COURSE_STATUS getStatus() {
+        return status;
+    }
+
+    public void setStatus(constants.COURSE_STATUS status) {
+        this.status = status;
     }
 }
