@@ -4,6 +4,7 @@ import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import main.constants.constants;
 import org.bson.Document;
 
 import java.util.ArrayList;
@@ -11,15 +12,16 @@ import java.util.List;
 import com.mongodb.client.model.Filters;
 import org.bson.conversions.Bson;
 
+import static main.constants.constants.DATABASE_NAME;
+
 public class mongodb {
-    private static final String CONNECTION_STRING = "mongodb://localhost:27017";
-    private static final String DATABASE_NAME = "course_registration";
+
 
     private static MongoClient mongoClient;
     private static MongoDatabase database;
 
     static {
-        mongoClient = MongoClients.create(CONNECTION_STRING);
+        mongoClient = MongoClients.create(constants.CONNECTION_STRING);
         database = mongoClient.getDatabase(DATABASE_NAME);
     }
 
