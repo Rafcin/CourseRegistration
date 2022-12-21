@@ -1,0 +1,449 @@
+/home/raf/.jdks/openjdk-19.0.1/bin/java -javaagent:/snap/intellij-idea-ultimate/398/lib/idea_rt.jar=44757:/snap/intellij-idea-ultimate/398/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /home/raf/IdeaProjects/CourseRegistration/out/production/CourseRegistration:/home/raf/.m2/repository/org/mongodb/mongodb-driver-sync/4.8.1/mongodb-driver-sync-4.8.1.jar:/home/raf/.m2/repository/org/mongodb/bson/4.8.1/bson-4.8.1.jar:/home/raf/.m2/repository/org/mongodb/mongodb-driver-core/4.8.1/mongodb-driver-core-4.8.1.jar:/home/raf/.m2/repository/org/mongodb/bson-record-codec/4.8.1/bson-record-codec-4.8.1.jar:/home/raf/.m2/repository/com/google/code/gson/gson/2.10/gson-2.10.jar:/home/raf/.m2/repository/com/github/javafaker/javafaker/1.0.2/javafaker-1.0.2.jar:/home/raf/.m2/repository/org/apache/commons/commons-lang3/3.5/commons-lang3-3.5.jar:/home/raf/.m2/repository/org/yaml/snakeyaml/1.23/snakeyaml-1.23-android.jar:/home/raf/.m2/repository/com/github/mifmif/generex/1.0.2/generex-1.0.2.jar:/home/raf/.m2/repository/dk/brics/automaton/automaton/1.11-8/automaton-1.11-8.jar Main
+Dec 20, 2022 5:42:43 PM com.mongodb.internal.diagnostics.logging.Loggers shouldUseSLF4J
+WARNING: SLF4J not found on the classpath.  Logging is disabled for the 'org.mongodb.driver' component
+| department | code | description | minStudents | maxStudents | facultyId | sessionIds | startDate | endDate | status | id |
+| CS | 1A | Introduction to Computer Science | 10 | 20 | 59fd3ddb-4241-4581-b89b-435301389456 | [10b39833-d2bc-431c-b68b-d5a451e6c368] | 01/01/2023 | 05/10/2023 | ACTIVE | CS1A |
+
+| department | code | description | minStudents | maxStudents | facultyId | sessionIds | startDate | endDate | status | id |
+| CS | 1B | Introduction to Computer Science II | 10 | 20 | 6b0f4a36-f800-435e-9b60-95ee4b1c6b1d | [38429e6c-b4cb-454a-8479-7c51de063662, 560c586b-cb7e-4f63-ac05-33ac80f202ae] | 01/01/2023 | 05/10/2023 | ACTIVE | CS1B |
+
+| department | code | description | minStudents | maxStudents | facultyId | sessionIds | startDate | endDate | status | id |
+| CS | 1C | Introduction to Computer Science III | 10 | 20 | 0540588c-2b9c-4b50-80d5-72f563ea8bdb | [3fe1cd81-81f0-41b4-afe8-5fc29fe26567, 11c701dc-c093-4274-b14a-8503287f55c9] | 01/01/2023 | 05/10/2023 | ACTIVE | CS1C |
+
+| department | code | description | minStudents | maxStudents | facultyId | sessionIds | startDate | endDate | status | id |
+| CS | 1D | Data Structures and Algorithms | 10 | 20 | 068aa66e-25ae-4c74-95a1-2517f977459c | [bf9a2530-8ac7-4411-b74d-c3320c825037, 964c5b2c-2508-4f91-81d9-9d2018beced7] | 01/01/2023 | 05/10/2023 | ACTIVE | CS1D |
+
+| department | code | description | minStudents | maxStudents | facultyId | sessionIds | startDate | endDate | status | id |
+| CS | 3A | COMPUTER ORGANIZATION AND MACHINE LANGUAGE | 10 | 20 | 68d31d80-7d2d-453e-83f7-4276dc239e85 | [36b9dff0-6952-4b4a-97d5-6abb8b0da54c, 90c60f6c-6b80-416a-abd6-805253d45a75] | 01/01/2023 | 05/10/2023 | ACTIVE | CS3A |
+
+| department | code | description | minStudents | maxStudents | facultyId | sessionIds | startDate | endDate | status | id |
+| CS | 3B | COMPUTER ORGANIZATION AND MACHINE LANGUAGE II | 10 | 20 | 558a59f0-c6f2-4a0f-b13b-4f17e5430e11 | [0c696de1-3715-44de-95c8-8bc5a328e83e, 6af283bc-45de-4f7f-9b16-cbb9bdb169cc] | 01/01/2023 | 05/10/2023 | ACTIVE | CS3B |
+
+| department | code | description | minStudents | maxStudents | facultyId | sessionIds | startDate | endDate | status | id |
+| CS | 4A | INTRODUCTION TO JAVA FOR COMPUTER SCIENCE | 10 | 20 | 31217440-22ef-4703-9cf7-efd27af528b0 | [775c3e65-bb2d-473d-9065-794ab19fc8ac, 9d2f8e14-27bb-437d-974f-bf68c88e35cf] | 01/01/2023 | 05/10/2023 | ACTIVE | CS4A |
+
+| department | code | description | minStudents | maxStudents | facultyId | sessionIds | startDate | endDate | status | id |
+| CS | 4B | ADVANCED TOPICS IN JAVA FOR COMPUTER SCIENCE | 10 | 20 | 491e2787-f626-4170-a6a7-c48abfc0895d | [98811c9f-c7ff-4610-bc9b-ad6dc14f5526, 2c5ccd5b-6e34-42f3-8690-93db543b9261] | 01/01/2023 | 05/10/2023 | ACTIVE | CS4B |
+
+| department | code | description | minStudents | maxStudents | facultyId | sessionIds | startDate | endDate | status | id |
+| CS | 30A | COMPUTER DISCRETE MATHEMATICS I | 10 | 20 | 683b503e-aea1-42c6-b1af-f2f5729cbc79 | [dfa7f547-d476-4db7-9a59-ff99c01907a9, 92ed467b-4405-481d-9ccf-b25717db964e, 8ddde648-7ab5-4983-89b8-7956c6e084f0] | 01/01/2023 | 05/10/2023 | ACTIVE | CS30A |
+
+| department | code | description | minStudents | maxStudents | facultyId | sessionIds | startDate | endDate | status | id |
+| CS | 30B | COMPUTER DISCRETE MATHEMATICS II | 10 | 20 | 692817fb-783d-4550-b852-91bb7a194a82 | [] | 01/01/2023 | 05/10/2023 | CANCELLED | CS30B |
+
+| courseId | id | facultyId | enrolledStudentIds | startDate | endDate | minStudents | maxStudents |
+| CS1A | 10b39833-d2bc-431c-b68b-d5a451e6c368 | 59fd3ddb-4241-4581-b89b-435301389456 | [18179ce2-cb3d-4f24-9498-f4b7f7152986, 692a4346-8105-422f-aa96-5da0205d9d4f, c8ec87ae-7410-4e95-8534-4d9db7092644, 247ef4e2-6e15-4c6e-ac84-7fdcd4af3798, 4cc9c7fd-a1c8-4be0-9659-442647ef5fad, 41dd178a-d766-417b-af8e-03a0b838f6fd, 6b729a92-c6bf-4493-beef-ae36dbdb61a9, b5724c00-4dd0-4fc9-af77-b8b2e733a679, 63f4eb1f-1fc0-4cd0-b543-c9487f9473d8, b4073b91-8414-4e17-bce2-11aef154e1a2, b79a9bd1-e998-414a-b366-35f720269d53, 22ffbf0a-9ec8-48ba-9167-9494696e587e, 4704c8c6-7d43-49fd-b737-a6c30868e7e0, e6533c23-273b-49d4-a441-fb20a7c9f2ce, 22bef5ac-9d17-4b6e-bfbf-2d0eb9e74094, 30deaaa1-7885-41b5-ad2e-20a86064216c, 582277ce-e086-486e-a094-1b1644bd85f1, 65f21d83-e107-407c-94a4-70cf25d97203] | 01/01/2023 | 05/10/2023 | 10 | 20 |
+
+| courseId | id | facultyId | enrolledStudentIds | startDate | endDate | minStudents | maxStudents |
+| CS1B | 38429e6c-b4cb-454a-8479-7c51de063662 | 6b0f4a36-f800-435e-9b60-95ee4b1c6b1d | [18179ce2-cb3d-4f24-9498-f4b7f7152986, 1135d386-9b77-48ff-a541-4d333856e5f8, 68ed9dca-ad13-40a7-b715-79acbbfb260d, b3af5314-8d28-48a3-ae51-0e2c8dbeff94, a92a66c9-aeae-4dff-bb68-2714f5e30e30, 3a483cbc-560a-49b1-8746-b31b1a12e75d, 5b81280d-ab15-4755-8794-19c12ac09357, 07db7e14-596a-4110-b456-9c93277b9fee, d289b5ee-3749-46cb-bd63-de5486b8bcee, b354c986-ede2-44eb-961e-5b016f315749, 6b729a92-c6bf-4493-beef-ae36dbdb61a9, b5724c00-4dd0-4fc9-af77-b8b2e733a679, 2ff4d7c8-810e-46ed-88d7-2883e763a8fe, d17cb27f-7230-4fe8-a367-2b251b56ab7c, f53f5079-5c63-4459-af71-da30f777f0d3, cd0802db-1270-4b0c-9953-5ba30672068d, 132e1328-4498-42fc-af2f-fbeaae2c836a, 4704c8c6-7d43-49fd-b737-a6c30868e7e0, 56513f9e-c2af-4b71-a237-750abc0b3746, d04d93d7-d5db-45b8-a473-e866c743564f] | 01/01/2023 | 05/10/2023 | 10 | 20 |
+
+| courseId | id | facultyId | enrolledStudentIds | startDate | endDate | minStudents | maxStudents |
+| CS1B | 560c586b-cb7e-4f63-ac05-33ac80f202ae | 6b0f4a36-f800-435e-9b60-95ee4b1c6b1d | [e1f9825b-0f81-425c-8a30-05564c6560ce, e6533c23-273b-49d4-a441-fb20a7c9f2ce, 0a633713-4582-4d17-83c2-a2eba4deb549, be3bc822-9849-4f25-9215-13601b59c3e9, aff27a8c-4ab0-4c70-ac40-809f308187c2, feb43c75-4049-46b4-8596-da007b89ce17, 2fbdae12-b2fb-4d6a-834e-49c5db4fd6c1, 7e31756d-4a93-44e0-b33e-e1d93d61ac2d, 65f21d83-e107-407c-94a4-70cf25d97203] | 01/01/2023 | 05/10/2023 | 10 | 20 |
+
+| courseId | id | facultyId | enrolledStudentIds | startDate | endDate | minStudents | maxStudents |
+| CS1C | 3fe1cd81-81f0-41b4-afe8-5fc29fe26567 | 0540588c-2b9c-4b50-80d5-72f563ea8bdb | [122b52fe-9c81-4f55-b390-b0a7c8fc0ddb, 18179ce2-cb3d-4f24-9498-f4b7f7152986, 68ed9dca-ad13-40a7-b715-79acbbfb260d, 692a4346-8105-422f-aa96-5da0205d9d4f, 6179a40c-d020-4733-a8ea-d30f0b5575a1, fce1c8d9-9226-48c6-91be-248bcc60c2cb, f0d825b3-75de-45d0-aab2-9d603ad1a38e, c500d7cb-867b-416c-92af-20480d1fe4b0, 3a483cbc-560a-49b1-8746-b31b1a12e75d, 90117716-1318-4043-a001-87ac3e7fdf5c, d289b5ee-3749-46cb-bd63-de5486b8bcee, 47dd41c2-6242-4cf4-afc0-179b8b7f27b5, 27721430-c1fc-4f38-abb6-65d747aeff84, 898e14a4-d9e0-42bf-8ae6-03abb856df1c, 6df3f318-8b0e-41bf-897e-3930b2853b22, 1bb619ec-bf27-4ad8-a9df-5fc690697071, c4f6ac4a-99d2-4582-a6fe-cf85ddcc3151, 08d68a4d-dd39-4be8-88ed-cab0b1b65067, 3825102f-ce3b-476c-9005-b7ee04c18969, 9b9daa33-427a-4c8c-b566-14213413e904] | 01/01/2023 | 05/10/2023 | 10 | 20 |
+
+| courseId | id | facultyId | enrolledStudentIds | startDate | endDate | minStudents | maxStudents |
+| CS1C | 11c701dc-c093-4274-b14a-8503287f55c9 | 0540588c-2b9c-4b50-80d5-72f563ea8bdb | [2312ffea-5188-4940-8dd2-a68a1e97767e, 1bac03e6-3c2e-418e-bccd-7a34e6779350, 575ef1b3-6a34-4ad0-ac28-43e45a488e62, 2fbdae12-b2fb-4d6a-834e-49c5db4fd6c1, 7e31756d-4a93-44e0-b33e-e1d93d61ac2d] | 01/01/2023 | 05/10/2023 | 10 | 20 |
+
+| courseId | id | facultyId | enrolledStudentIds | startDate | endDate | minStudents | maxStudents |
+| CS1D | bf9a2530-8ac7-4411-b74d-c3320c825037 | 068aa66e-25ae-4c74-95a1-2517f977459c | [e44f9295-ab8f-4e69-b13d-d0fb8da08bcc, 3034260c-1a48-45a9-a3e9-b6f88c33176f, 68ed9dca-ad13-40a7-b715-79acbbfb260d, f141b486-bd65-4962-90ab-e76fb12c3b39, f8b0fbb4-a8fa-4f30-9586-5c6c5428ebc7, 0a01cd43-b872-45b8-952e-3ce5b3d1857e, 48dcb85b-ae8b-44b7-9b93-bccdb577b7d5, c500d7cb-867b-416c-92af-20480d1fe4b0, e9082cf1-c4b4-49af-844f-a702d8e678e6, 07db7e14-596a-4110-b456-9c93277b9fee, b354c986-ede2-44eb-961e-5b016f315749, 9c28c9c0-d92c-42de-846e-6de8f44ec6b7, 898e14a4-d9e0-42bf-8ae6-03abb856df1c, 6df3f318-8b0e-41bf-897e-3930b2853b22, d17cb27f-7230-4fe8-a367-2b251b56ab7c, c4f6ac4a-99d2-4582-a6fe-cf85ddcc3151, 16def94a-5c31-4297-a704-c62b8dc2c2e4, f2a79e81-a710-4411-85a1-53cb6d23220d, cd0802db-1270-4b0c-9953-5ba30672068d, 87c4f6eb-843a-4054-a1a8-ebca3c6bb8d7] | 01/01/2023 | 05/10/2023 | 10 | 20 |
+
+| courseId | id | facultyId | enrolledStudentIds | startDate | endDate | minStudents | maxStudents |
+| CS1D | 964c5b2c-2508-4f91-81d9-9d2018beced7 | 068aa66e-25ae-4c74-95a1-2517f977459c | [9b9daa33-427a-4c8c-b566-14213413e904, 2312ffea-5188-4940-8dd2-a68a1e97767e, 852336f6-c759-4ecd-9167-bbcb68a90385, 37d726f6-5d22-44ef-8187-ab445e12c9b0, 9b861c5d-f81c-457c-b886-68d0652b8535, aff27a8c-4ab0-4c70-ac40-809f308187c2, 7e31756d-4a93-44e0-b33e-e1d93d61ac2d] | 01/01/2023 | 05/10/2023 | 10 | 20 |
+
+| courseId | id | facultyId | enrolledStudentIds | startDate | endDate | minStudents | maxStudents |
+| CS3A | 36b9dff0-6952-4b4a-97d5-6abb8b0da54c | 68d31d80-7d2d-453e-83f7-4276dc239e85 | [3ca7679b-0d73-4feb-890c-637566c45b6e, 21b98c5f-b3db-4057-84d3-fe35c85e4728, e44f9295-ab8f-4e69-b13d-d0fb8da08bcc, c332469b-45a1-43bf-8df4-fc94cd91db8f, f141b486-bd65-4962-90ab-e76fb12c3b39, b3af5314-8d28-48a3-ae51-0e2c8dbeff94, 140b497d-8308-458d-90de-5362ca96681d, f8b0fbb4-a8fa-4f30-9586-5c6c5428ebc7, 1c22ea70-708e-4841-9f35-ebda95028c7b, 649f91be-c86c-4e65-ae65-473373c6bcf5, 57e7501b-283e-4a7a-b6f3-23761625012e, 4cc9c7fd-a1c8-4be0-9659-442647ef5fad, e9082cf1-c4b4-49af-844f-a702d8e678e6, 8d7153a8-c76e-4382-bd3e-bd87358bb471, 9c28c9c0-d92c-42de-846e-6de8f44ec6b7, fa7f0ea9-a957-4c7a-91dd-0026fc590099, 27721430-c1fc-4f38-abb6-65d747aeff84, 1bb619ec-bf27-4ad8-a9df-5fc690697071, d17cb27f-7230-4fe8-a367-2b251b56ab7c, c4f6ac4a-99d2-4582-a6fe-cf85ddcc3151] | 01/01/2023 | 05/10/2023 | 10 | 20 |
+
+| courseId | id | facultyId | enrolledStudentIds | startDate | endDate | minStudents | maxStudents |
+| CS3A | 90c60f6c-6b80-416a-abd6-805253d45a75 | 68d31d80-7d2d-453e-83f7-4276dc239e85 | [508f52cf-d1e0-4bd4-b41c-f9cb6b033ae2, 406fc52a-3b66-462a-a711-a71abfbea45f, f53f5079-5c63-4459-af71-da30f777f0d3, f2a79e81-a710-4411-85a1-53cb6d23220d, b79a9bd1-e998-414a-b366-35f720269d53, 08d68a4d-dd39-4be8-88ed-cab0b1b65067, 132e1328-4498-42fc-af2f-fbeaae2c836a, b12e34cc-34c7-406f-95ef-1f768d266192, e2e20778-b8cc-4f90-8606-4a9e6c3a7c90, be82020c-98e4-443e-aa62-fe8c6b29d4a2, 01be5e42-76c1-4e4b-859c-10c532cd3ee2, 7e31756d-4a93-44e0-b33e-e1d93d61ac2d] | 01/01/2023 | 05/10/2023 | 10 | 20 |
+
+| courseId | id | facultyId | enrolledStudentIds | startDate | endDate | minStudents | maxStudents |
+| CS3B | 0c696de1-3715-44de-95c8-8bc5a328e83e | 558a59f0-c6f2-4a0f-b13b-4f17e5430e11 | [ad484655-861a-4913-a36d-c9625781caa4, c332469b-45a1-43bf-8df4-fc94cd91db8f, a92a66c9-aeae-4dff-bb68-2714f5e30e30, 247ef4e2-6e15-4c6e-ac84-7fdcd4af3798, fce1c8d9-9226-48c6-91be-248bcc60c2cb, f0d825b3-75de-45d0-aab2-9d603ad1a38e, c4ede739-545a-4ab6-bb05-e20746d09ce9, 47dd41c2-6242-4cf4-afc0-179b8b7f27b5, 898e14a4-d9e0-42bf-8ae6-03abb856df1c, 8eed387a-e062-4a00-ae0f-40343222fed1, b5724c00-4dd0-4fc9-af77-b8b2e733a679, 406fc52a-3b66-462a-a711-a71abfbea45f, b4073b91-8414-4e17-bce2-11aef154e1a2, 08d68a4d-dd39-4be8-88ed-cab0b1b65067, 3825102f-ce3b-476c-9005-b7ee04c18969, 4704c8c6-7d43-49fd-b737-a6c30868e7e0, b12e34cc-34c7-406f-95ef-1f768d266192, 852336f6-c759-4ecd-9167-bbcb68a90385, be82020c-98e4-443e-aa62-fe8c6b29d4a2, 56513f9e-c2af-4b71-a237-750abc0b3746] | 01/01/2023 | 05/10/2023 | 10 | 20 |
+
+| courseId | id | facultyId | enrolledStudentIds | startDate | endDate | minStudents | maxStudents |
+| CS3B | 6af283bc-45de-4f7f-9b16-cbb9bdb169cc | 558a59f0-c6f2-4a0f-b13b-4f17e5430e11 | [9b861c5d-f81c-457c-b886-68d0652b8535, 30deaaa1-7885-41b5-ad2e-20a86064216c, 575ef1b3-6a34-4ad0-ac28-43e45a488e62] | 01/01/2023 | 05/10/2023 | 10 | 20 |
+
+| courseId | id | facultyId | enrolledStudentIds | startDate | endDate | minStudents | maxStudents |
+| CS4A | 775c3e65-bb2d-473d-9065-794ab19fc8ac | 31217440-22ef-4703-9cf7-efd27af528b0 | [c332469b-45a1-43bf-8df4-fc94cd91db8f, 44d7c71f-b354-4e6b-a3b5-177bcb9a0d9e, 3034260c-1a48-45a9-a3e9-b6f88c33176f, 140b497d-8308-458d-90de-5362ca96681d, f8b0fbb4-a8fa-4f30-9586-5c6c5428ebc7, 0a01cd43-b872-45b8-952e-3ce5b3d1857e, 48dcb85b-ae8b-44b7-9b93-bccdb577b7d5, c500d7cb-867b-416c-92af-20480d1fe4b0, 3a483cbc-560a-49b1-8746-b31b1a12e75d, 90117716-1318-4043-a001-87ac3e7fdf5c, 41dd178a-d766-417b-af8e-03a0b838f6fd, d289b5ee-3749-46cb-bd63-de5486b8bcee, 6b729a92-c6bf-4493-beef-ae36dbdb61a9, 27721430-c1fc-4f38-abb6-65d747aeff84, 03fd26ff-278e-44f9-ac25-54a22a11dc87, 406fc52a-3b66-462a-a711-a71abfbea45f, b4073b91-8414-4e17-bce2-11aef154e1a2, b79a9bd1-e998-414a-b366-35f720269d53, 08d68a4d-dd39-4be8-88ed-cab0b1b65067, 9b9daa33-427a-4c8c-b566-14213413e904] | 01/01/2023 | 05/10/2023 | 10 | 20 |
+
+| courseId | id | facultyId | enrolledStudentIds | startDate | endDate | minStudents | maxStudents |
+| CS4A | 9d2f8e14-27bb-437d-974f-bf68c88e35cf | 31217440-22ef-4703-9cf7-efd27af528b0 | [e2e20778-b8cc-4f90-8606-4a9e6c3a7c90, be82020c-98e4-443e-aa62-fe8c6b29d4a2, 31487dc2-6863-435a-a290-5ed4e615b11a, e1f9825b-0f81-425c-8a30-05564c6560ce, 22bef5ac-9d17-4b6e-bfbf-2d0eb9e74094, 37d726f6-5d22-44ef-8187-ab445e12c9b0, 01be5e42-76c1-4e4b-859c-10c532cd3ee2, feb43c75-4049-46b4-8596-da007b89ce17] | 01/01/2023 | 05/10/2023 | 10 | 20 |
+
+| courseId | id | facultyId | enrolledStudentIds | startDate | endDate | minStudents | maxStudents |
+| CS4B | 98811c9f-c7ff-4610-bc9b-ad6dc14f5526 | 491e2787-f626-4170-a6a7-c48abfc0895d | [122b52fe-9c81-4f55-b390-b0a7c8fc0ddb, 21b98c5f-b3db-4057-84d3-fe35c85e4728, 1135d386-9b77-48ff-a541-4d333856e5f8, c332469b-45a1-43bf-8df4-fc94cd91db8f, a4c28b97-0a1e-436d-b665-213dff87b2d6, f141b486-bd65-4962-90ab-e76fb12c3b39, 692a4346-8105-422f-aa96-5da0205d9d4f, 140b497d-8308-458d-90de-5362ca96681d, 247ef4e2-6e15-4c6e-ac84-7fdcd4af3798, 1c22ea70-708e-4841-9f35-ebda95028c7b, 649f91be-c86c-4e65-ae65-473373c6bcf5, 48dcb85b-ae8b-44b7-9b93-bccdb577b7d5, fce1c8d9-9226-48c6-91be-248bcc60c2cb, 57e7501b-283e-4a7a-b6f3-23761625012e, c500d7cb-867b-416c-92af-20480d1fe4b0, e9082cf1-c4b4-49af-844f-a702d8e678e6, 90117716-1318-4043-a001-87ac3e7fdf5c, 07db7e14-596a-4110-b456-9c93277b9fee, 41dd178a-d766-417b-af8e-03a0b838f6fd, d289b5ee-3749-46cb-bd63-de5486b8bcee] | 01/01/2023 | 05/10/2023 | 10 | 20 |
+
+| courseId | id | facultyId | enrolledStudentIds | startDate | endDate | minStudents | maxStudents |
+| CS4B | 2c5ccd5b-6e34-42f3-8690-93db543b9261 | 491e2787-f626-4170-a6a7-c48abfc0895d | [b354c986-ede2-44eb-961e-5b016f315749, 59db144e-226e-4525-9283-7f5027e12907, 9c28c9c0-d92c-42de-846e-6de8f44ec6b7, 8eed387a-e062-4a00-ae0f-40343222fed1, 2ff4d7c8-810e-46ed-88d7-2883e763a8fe, 16def94a-5c31-4297-a704-c62b8dc2c2e4, cd0802db-1270-4b0c-9953-5ba30672068d, b79a9bd1-e998-414a-b366-35f720269d53, 132e1328-4498-42fc-af2f-fbeaae2c836a, e2e20778-b8cc-4f90-8606-4a9e6c3a7c90, 2312ffea-5188-4940-8dd2-a68a1e97767e, 56513f9e-c2af-4b71-a237-750abc0b3746, d04d93d7-d5db-45b8-a473-e866c743564f, e1f9825b-0f81-425c-8a30-05564c6560ce, e6533c23-273b-49d4-a441-fb20a7c9f2ce, 582277ce-e086-486e-a094-1b1644bd85f1, aff27a8c-4ab0-4c70-ac40-809f308187c2, feb43c75-4049-46b4-8596-da007b89ce17] | 01/01/2023 | 05/10/2023 | 10 | 20 |
+
+| courseId | id | facultyId | enrolledStudentIds | startDate | endDate | minStudents | maxStudents |
+| CS30A | dfa7f547-d476-4db7-9a59-ff99c01907a9 | 683b503e-aea1-42c6-b1af-f2f5729cbc79 | [122b52fe-9c81-4f55-b390-b0a7c8fc0ddb, 3ca7679b-0d73-4feb-890c-637566c45b6e, 21b98c5f-b3db-4057-84d3-fe35c85e4728, ad484655-861a-4913-a36d-c9625781caa4, e44f9295-ab8f-4e69-b13d-d0fb8da08bcc, 44d7c71f-b354-4e6b-a3b5-177bcb9a0d9e, c8ec87ae-7410-4e95-8534-4d9db7092644, a92a66c9-aeae-4dff-bb68-2714f5e30e30, 140b497d-8308-458d-90de-5362ca96681d, 247ef4e2-6e15-4c6e-ac84-7fdcd4af3798, f0d825b3-75de-45d0-aab2-9d603ad1a38e, 4cc9c7fd-a1c8-4be0-9659-442647ef5fad, 81ca8b56-8b0c-41ef-97d0-47a19636f124, 90117716-1318-4043-a001-87ac3e7fdf5c, b354c986-ede2-44eb-961e-5b016f315749, 27721430-c1fc-4f38-abb6-65d747aeff84, b5724c00-4dd0-4fc9-af77-b8b2e733a679, 8356bdee-2d70-4423-be32-e6345d1438ad, 16def94a-5c31-4297-a704-c62b8dc2c2e4, 63f4eb1f-1fc0-4cd0-b543-c9487f9473d8] | 01/01/2023 | 05/10/2023 | 10 | 20 |
+
+| courseId | id | facultyId | enrolledStudentIds | startDate | endDate | minStudents | maxStudents |
+| CS30A | 92ed467b-4405-481d-9ccf-b25717db964e | 683b503e-aea1-42c6-b1af-f2f5729cbc79 | [3825102f-ce3b-476c-9005-b7ee04c18969, 22ffbf0a-9ec8-48ba-9167-9494696e587e, 4704c8c6-7d43-49fd-b737-a6c30868e7e0, b12e34cc-34c7-406f-95ef-1f768d266192, 9b9daa33-427a-4c8c-b566-14213413e904, e2e20778-b8cc-4f90-8606-4a9e6c3a7c90, 2312ffea-5188-4940-8dd2-a68a1e97767e, 852336f6-c759-4ecd-9167-bbcb68a90385, 31487dc2-6863-435a-a290-5ed4e615b11a, d04d93d7-d5db-45b8-a473-e866c743564f, 66bf8f2a-d6b8-4e3e-985f-9c7621418029, 0a633713-4582-4d17-83c2-a2eba4deb549, be3bc822-9849-4f25-9215-13601b59c3e9, 5e80c4c1-a81c-4ce6-8821-341abe1f079d, 1bac03e6-3c2e-418e-bccd-7a34e6779350, 37d726f6-5d22-44ef-8187-ab445e12c9b0, 01be5e42-76c1-4e4b-859c-10c532cd3ee2, 30deaaa1-7885-41b5-ad2e-20a86064216c, 575ef1b3-6a34-4ad0-ac28-43e45a488e62, aff27a8c-4ab0-4c70-ac40-809f308187c2] | 01/01/2023 | 05/10/2023 | 10 | 20 |
+
+| courseId | id | facultyId | enrolledStudentIds | startDate | endDate | minStudents | maxStudents |
+| CS30A | 8ddde648-7ab5-4983-89b8-7956c6e084f0 | 683b503e-aea1-42c6-b1af-f2f5729cbc79 | [feb43c75-4049-46b4-8596-da007b89ce17, 65f21d83-e107-407c-94a4-70cf25d97203] | 01/01/2023 | 05/10/2023 | 10 | 20 |
+
+| isTenured | hireDate | courseId |
+| true | Wed Feb 26 20:50:06 PST 2020 | CS1A |
+
+| isTenured | hireDate | courseId |
+| true | Wed Feb 24 16:54:15 PST 2021 | CS1B |
+
+| isTenured | hireDate | courseId |
+| true | Sun Jan 09 18:23:53 PST 2022 | CS1C |
+
+| isTenured | hireDate | courseId |
+| true | Sat Feb 05 16:54:46 PST 2022 | CS1D |
+
+| isTenured | hireDate | courseId |
+| true | Tue Jul 05 13:27:16 PDT 2022 | CS3A |
+
+| isTenured | hireDate | courseId |
+| true | Mon Nov 01 23:31:12 PDT 2021 | CS3B |
+
+| isTenured | hireDate | courseId |
+| true | Fri Nov 13 01:08:57 PST 2020 | CS4A |
+
+| isTenured | hireDate | courseId |
+| true | Mon Aug 29 09:09:13 PDT 2022 | CS4B |
+
+| isTenured | hireDate | courseId |
+| true | Sun Oct 24 00:36:25 PDT 2021 | CS30A |
+
+| isTenured | hireDate | courseId |
+| true | Wed Nov 03 14:56:09 PDT 2021 | CS30B |
+
+| isTenured | hireDate | courseId |
+| true | Tue Sep 29 17:34:45 PDT 2020 | null |
+
+| isTenured | hireDate | courseId |
+| true | Sun Apr 17 17:07:25 PDT 2022 | null |
+
+| isTenured | hireDate | courseId |
+| true | Sun Nov 29 08:55:02 PST 2020 | null |
+
+| isTenured | hireDate | courseId |
+| true | Fri Jun 05 19:42:10 PDT 2020 | null |
+
+| isTenured | hireDate | courseId |
+| true | Wed Nov 23 14:32:45 PST 2022 | null |
+
+| isTenured | hireDate | courseId |
+| true | Mon Aug 09 03:20:22 PDT 2021 | null |
+
+| isTenured | hireDate | courseId |
+| true | Tue Jan 26 03:10:32 PST 2021 | null |
+
+| isTenured | hireDate | courseId |
+| true | Thu Jun 10 15:50:08 PDT 2021 | null |
+
+| isTenured | hireDate | courseId |
+| true | Tue Jul 06 19:56:30 PDT 2021 | null |
+
+| isTenured | hireDate | courseId |
+| true | Thu Mar 31 22:16:48 PDT 2022 | null |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Fri Dec 09 19:47:33 PST 2022 | 4 | [CS1C, CS4B, CS30A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Tue Dec 06 01:50:25 PST 2022 | 4 | [CS3A, CS30A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Mon Dec 05 03:58:00 PST 2022 | 4 | [CS3A, CS4B, CS30A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Tue Dec 06 09:32:21 PST 2022 | 4 | [CS1A, CS1B, CS1C] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Wed Dec 07 10:40:27 PST 2022 | 4 | [CS3B, CS30A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Wed Dec 07 14:11:07 PST 2022 | 4 | [CS1B, CS4B] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Sun Dec 04 21:09:11 PST 2022 | 4 | [CS1D, CS3A, CS30A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Tue Dec 06 06:25:22 PST 2022 | 4 | [CS3A, CS3B, CS4A, CS4B] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Wed Dec 07 01:37:48 PST 2022 | 4 | [CS4A, CS30A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Thu Dec 01 07:04:07 PST 2022 | 4 | [CS4B] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Fri Dec 09 12:04:13 PST 2022 | 4 | [CS1D, CS4A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Tue Dec 06 00:05:46 PST 2022 | 4 | [CS1B, CS1C, CS1D] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Mon Dec 05 16:09:32 PST 2022 | 4 | [CS1D, CS3A, CS4B] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Sat Dec 10 20:45:50 PST 2022 | 4 | [CS1A, CS1C, CS4B] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Thu Dec 01 01:22:58 PST 2022 | 4 | [CS1B, CS3A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Thu Dec 01 00:15:26 PST 2022 | 4 | [CS1A, CS30A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Mon Dec 05 10:30:42 PST 2022 | 4 | [CS1B, CS3B, CS30A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Sat Dec 10 20:56:26 PST 2022 | 4 | [CS3A, CS4A, CS4B, CS30A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Fri Dec 09 04:47:15 PST 2022 | 4 | [CS1D, CS3A, CS4A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Thu Dec 01 08:25:29 PST 2022 | 4 | [CS1A, CS3B, CS4B, CS30A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Fri Dec 09 07:52:50 PST 2022 | 4 | [CS3A, CS4B] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Tue Dec 06 04:27:38 PST 2022 | 4 | [CS1D, CS4A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Mon Dec 05 10:49:28 PST 2022 | 4 | [CS1C] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Tue Dec 06 22:29:44 PST 2022 | 4 | [CS3A, CS4B] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Sat Dec 03 22:55:44 PST 2022 | 4 | [CS1D, CS4A, CS4B] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Thu Dec 08 06:31:29 PST 2022 | 4 | [CS1C, CS3B, CS4B] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Tue Dec 06 00:41:04 PST 2022 | 4 | [CS1C, CS3B, CS30A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Wed Dec 07 00:45:48 PST 2022 | 4 | [CS3A, CS4B] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Wed Dec 07 23:31:23 PST 2022 | 4 | [CS1C, CS1D, CS4A, CS4B] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Tue Dec 06 16:26:48 PST 2022 | 4 | [CS1A, CS3A, CS30A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Fri Dec 09 22:26:43 PST 2022 | 4 | [CS30A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Wed Dec 07 20:40:05 PST 2022 | 4 | [CS1D, CS3A, CS4B] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Fri Dec 02 20:39:04 PST 2022 | 4 | [CS1B, CS1C, CS4A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Thu Dec 01 07:00:47 PST 2022 | 4 | [CS1B] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Tue Dec 06 12:44:29 PST 2022 | 4 | [CS1C, CS4A, CS4B, CS30A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Tue Dec 06 05:31:48 PST 2022 | 4 | [CS3A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Thu Dec 01 07:20:48 PST 2022 | 4 | [CS1B, CS1D, CS4B] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Sat Dec 03 16:08:17 PST 2022 | 4 | [CS1A, CS4A, CS4B] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Mon Dec 05 11:02:18 PST 2022 | 4 | [CS1B, CS1C, CS4A, CS4B] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Fri Dec 02 16:17:56 PST 2022 | 4 | [CS3B] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Mon Dec 05 12:32:52 PST 2022 | 4 | [CS1B, CS1D, CS4B, CS30A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Mon Dec 05 17:30:01 PST 2022 | 4 | [CS1C, CS3B] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Mon Dec 05 01:40:22 PST 2022 | 4 | [CS4B] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Thu Dec 01 16:55:11 PST 2022 | 4 | [CS1D, CS3A, CS4B] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Wed Dec 07 19:43:59 PST 2022 | 4 | [CS3A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Fri Dec 09 13:50:19 PST 2022 | 4 | [CS1A, CS1B, CS4A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Thu Dec 01 02:23:45 PST 2022 | 4 | [CS1C, CS3A, CS4A, CS30A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Mon Dec 05 17:52:32 PST 2022 | 4 | [CS1C, CS1D, CS3B] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Tue Dec 06 08:25:57 PST 2022 | 4 | [CS3B, CS4B] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Sat Dec 10 07:01:01 PST 2022 | 4 | [CS1C, CS1D] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Mon Dec 05 16:32:31 PST 2022 | 4 | [CS1A, CS1B, CS3B, CS30A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Thu Dec 01 14:05:03 PST 2022 | 4 | [CS1B, CS4B] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Sun Dec 04 18:50:32 PST 2022 | 4 | [CS1C, CS3A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Fri Dec 09 13:17:23 PST 2022 | 4 | [CS4A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Tue Dec 06 18:18:40 PST 2022 | 4 | [CS1B, CS1D, CS3A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Thu Dec 08 13:42:50 PST 2022 | 4 | [CS1C, CS1D, CS3A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Fri Dec 09 06:41:48 PST 2022 | 4 | [CS30A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Mon Dec 05 06:08:32 PST 2022 | 4 | [CS3A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Tue Dec 06 08:50:34 PST 2022 | 4 | [CS3A, CS3B, CS4A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Tue Dec 06 13:43:28 PST 2022 | 4 | [CS1D, CS4B, CS30A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Thu Dec 08 12:15:24 PST 2022 | 4 | [CS1B, CS3A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Tue Dec 06 13:58:24 PST 2022 | 4 | [CS1D, CS3A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Sat Dec 03 13:38:40 PST 2022 | 4 | [CS1A, CS30A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Sat Dec 03 22:20:04 PST 2022 | 4 | [CS1B, CS1D, CS4B] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Thu Dec 08 05:57:44 PST 2022 | 4 | [CS1A, CS3B, CS4A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Fri Dec 09 06:08:36 PST 2022 | 4 | [CS1D] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Fri Dec 02 21:42:23 PST 2022 | 4 | [CS1A, CS3A, CS4A, CS4B] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Fri Dec 09 16:26:25 PST 2022 | 4 | [CS1C, CS3A, CS3B, CS4A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Wed Dec 07 21:45:32 PST 2022 | 4 | [CS1C, CS3B, CS30A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Sat Dec 03 11:40:05 PST 2022 | 4 | [CS1B, CS3A, CS4B] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Fri Dec 09 02:55:10 PST 2022 | 4 | [CS1A, CS30A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Sun Dec 04 18:42:38 PST 2022 | 4 | [CS1A, CS1B, CS3B, CS30A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Fri Dec 02 13:58:43 PST 2022 | 4 | [CS3A, CS3B, CS30A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Sat Dec 03 05:24:38 PST 2022 | 4 | [CS1C, CS1D, CS4A, CS30A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Tue Dec 06 22:59:00 PST 2022 | 4 | [CS3A, CS4A, CS4B, CS30A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Fri Dec 02 12:46:12 PST 2022 | 4 | [CS1C, CS1D, CS4B, CS30A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Wed Dec 07 15:41:10 PST 2022 | 4 | [CS1D, CS3B, CS30A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Fri Dec 02 19:33:15 PST 2022 | 4 | [CS3A, CS3B, CS4A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Wed Dec 07 19:22:07 PST 2022 | 4 | [CS1B, CS3B, CS4B] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Thu Dec 08 16:47:45 PST 2022 | 4 | [CS4A, CS30A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Wed Dec 07 21:18:36 PST 2022 | 4 | [CS1B, CS4B, CS30A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Mon Dec 05 00:54:12 PST 2022 | 4 | [CS1B, CS4A, CS4B] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Wed Dec 07 10:03:30 PST 2022 | 4 | [CS30A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Sun Dec 04 19:28:39 PST 2022 | 4 | [CS1A, CS1B, CS4B] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Tue Dec 06 06:48:28 PST 2022 | 4 | [CS1B, CS30A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Thu Dec 08 10:51:46 PST 2022 | 4 | [CS1B, CS30A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Sun Dec 04 23:55:33 PST 2022 | 4 | [CS30A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Sat Dec 10 06:56:07 PST 2022 | 4 | [CS1A, CS4A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Wed Dec 07 07:18:49 PST 2022 | 4 | [CS1C, CS30A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Tue Dec 06 17:01:29 PST 2022 | 4 | [CS1D, CS4A, CS30A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Sat Dec 10 09:36:26 PST 2022 | 4 | [CS1D, CS3B] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Mon Dec 05 14:57:00 PST 2022 | 4 | [CS3A, CS4A, CS30A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Wed Dec 07 21:40:54 PST 2022 | 4 | [CS1A, CS3B, CS30A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Sun Dec 04 23:38:34 PST 2022 | 4 | [CS1C, CS3B, CS30A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Fri Dec 02 06:50:44 PST 2022 | 4 | [CS1A, CS4B] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Fri Dec 09 06:04:56 PST 2022 | 4 | [CS1B, CS1D, CS4B, CS30A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Tue Dec 06 22:01:46 PST 2022 | 4 | [CS1B, CS4A, CS4B, CS30A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Wed Dec 07 04:22:14 PST 2022 | 4 | [CS1B, CS1C] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Fri Dec 09 10:39:34 PST 2022 | 4 | [CS1B, CS1C, CS1D, CS3A] | [] |
+
+| gpa | startDate | maximumCourses | enrolledCoursesIds | requiredCoursesIds |
+| 4.0 | Thu Dec 08 19:40:07 PST 2022 | 4 | [CS1A, CS1B, CS30A] | [] |
+
+
+Process finished with exit code 0

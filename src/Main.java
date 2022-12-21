@@ -11,8 +11,12 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.UUID;
 
-import static main.constants.constants.COLLECTION_COURSES;
+import static main.constants.constants.*;
 
+/**
+ * This is a course registration system built on MongoDB. I decided to be adventurous and use MongoDB and just try out some new things.
+ * I'm not sure if I'll continue to use MongoDB, but I'm having fun with it.
+ */
 public class Main {
     public static void main(String[] args) {
         //Remove all the users, courses, and sessions for a clean test. Completely random users will be created each time.
@@ -22,11 +26,14 @@ public class Main {
         registrar.deleteAllSessions();
         //Create the new users and classes.
         generate generate = new generate();
-        generate.students(100);
-        generate.faculty(20);
-        generate.courses();
+        generate.students(150);
+        generate.faculty(10);
+        generate.courses(5);
         //Schedule the classes and faculty.
         registrar.schedule();
         registrar.print(COLLECTION_COURSES, course.class);
+        registrar.print(COLLECTION_SESSIONS, session.class);
+        registrar.print(COLLECTION_FACULTY, faculty.class);
+        registrar.print(COLLECTION_STUDENTS, student.class);
     }
 }

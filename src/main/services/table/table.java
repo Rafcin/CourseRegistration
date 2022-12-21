@@ -24,7 +24,11 @@ public class table {
         fields.forEach(field -> {
             try {
                 field.setAccessible(true);
-                System.out.printf(" %s |", field.get(object).toString());
+                if(field.get(object) == null) {
+                    System.out.printf(" %s |", "null");
+                }else {
+                    System.out.printf(" %s |", field.get(object).toString());
+                }
             } catch (IllegalAccessException e) {
                 e.printStackTrace();
             }

@@ -113,4 +113,8 @@ public class generate {
     public void courses() {
         courses.forEach(course -> registrar.createCourse(course));
     }
+    //Limit the number of courses created
+    public void courses(int size) {
+        courses.stream().limit(size).forEach(course -> registrar.createCourse(course));
+    }
 }
